@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+.event_name_section{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    padding: 0 10px;
+}
+.moon_container{
+    position: relative;
+    z-index: 2;
+    width: min(350px, 80vw);
+    height: min(350px, 80vw);
+    background-color: antiquewhite;
+    border-radius: 50%;
+    background-image: url(moon.png);
+    object-fit: cover;
+    background-position: center;
+    filter: drop-shadow(0 0 70px rgb(101, 43, 246));
+    box-shadow: 0 0 20px 0px rgb(255, 255, 255);
+    animation: 30s linear infinite rotateMoon;
+}
+@keyframes rotateMoon{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.techxtreme_text{
+    text-align: center;
+    position: absolute;
+    z-index: 111;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -280%);
+    width: 100%;
+}
+.techxtreme_text svg{
+    transform: scale(13);
+}
+.techxtreme_text svg path{
+    fill: url(#paint0_linear_1_2);
+    stroke: #ffffff;
+    stroke-width: 0.3;
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: textAnimate 4s ease-in-out alternate infinite;
+}
+@keyframes textAnimate {
+    0%{
+        stroke-dashoffset: 60;
+    }
+    70%{
+
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+.sub_text{
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-top: -17px;
+    font-weight: 600;
+    text-align: center;
+}
+.btn_container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.btn_container button a{
+    text-decoration: none;
+    color: white;
+}
+.btn_container button{
+    padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+    background-color: #7b50fc;
+    box-shadow: 0px 0px 20px 1px #8f68ff;
+    border-radius: 10px;
+    font-size: clamp(16px, 3vw, 20px);
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+.btn_container button:hover{
+    background-color: #7b50fc69;
+    border: 2px solid #7b50fc;
+}
+
+@media screen and (max-width: 768px) {
+    .techxtreme_text {
+        transform: translate(-50%, -320%);
+    }
+    .techxtreme_text svg{
+        transform: scale(8);
+    }
+    .moon_container{
+        width: 200px;
+    height: 200px;
+    }
+    .sub_text{
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        margin-top: -10px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .techxtreme_text svg{
+        transform: scale(6);
+    }
+    .techxtreme_text {
+        transform: translate(-50%, -250%);
+    }
+    .sub_text{
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        margin-top: -10px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 375px) {
+    .techxtreme_text svg{
+        transform: scale(5);
+    }
+    .techxtreme_text {
+        transform: translate(-50%, -250%);
+    }
+    .sub_text{
+        font-size: clamp(1.2rem, 4vw, 2rem);
+        margin-top: -10px;
+        font-weight: 600;
+        text-align: center;
+    }
+}
