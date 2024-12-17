@@ -20,6 +20,7 @@ html,body{
     font-family: "Poppins", sans-serif;
     padding: 0 10px;
     overflow: hidden;
+    gap: 1rem;
 }
 .moon_container{
     position: relative;
@@ -75,7 +76,7 @@ html,body{
     }
 }
 .sub_text{
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
     margin-top: clamp(-15px, -2vw, 1px);
     font-weight: 600;
     text-align: center;
@@ -101,17 +102,18 @@ html,body{
     cursor: pointer;
     font-family: "Poppins", sans-serif;
     transition: all 0.3s ease-in-out;
+    margin-bottom: -20px;
 }
 .btn_container button:hover{
     background-color: #7b50fc69;
     border: 2px solid #7b50fc;
 }
-@media screen and (max-width:425px){
+@media (max-width:600px){
     .techxtreme_text svg {
         transform: scale(6);
     }
 }
-@media screen and (max-width:375px){
+@media (max-width:375px){
     .techxtreme_text svg {
         transform: scale(4);
     }
